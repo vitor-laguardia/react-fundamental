@@ -6,7 +6,7 @@
   "author": "vitor laguardia <vitor.laguardia@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d build"
+    "build": "babel src -d transpiled && webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.24.5",
