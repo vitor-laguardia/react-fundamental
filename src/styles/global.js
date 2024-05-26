@@ -1,10 +1,12 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 //margins reset, etc
 export default createGlobalStyle`
   body {
-    background: #222;
+    ${(props) => css`
+      background: ${props.theme.backgroundColor};
+      color: ${props.theme.textColor};
+    `};
     font-family: sans-serif;
-    color: #fff
   }
 `;
