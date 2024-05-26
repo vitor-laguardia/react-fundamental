@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Post from '../Post';
 import Header from '../Header';
 import ThemeProvider from '../../contexts/ThemeProvider';
+import { Title } from './styles';
 
 function App() {
   const [posts, setPosts] = useState([
@@ -55,9 +56,9 @@ function App() {
   return (
     <ThemeProvider>
       <Header>
-        <h2>
+        <Title as={'h2'}>
           Posts of the week <button onClick={handleRefresh}>Refresh</button>
-        </h2>
+        </Title>
       </Header>
       <hr />
       {posts.map((post) => (
