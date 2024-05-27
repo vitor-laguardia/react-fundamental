@@ -5,12 +5,12 @@ export const Container = styled.header`
   height: 100px;
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: ${({ theme }) => `0 ${theme.spacing.large}px`};
   border-radius: 10px;
   justify-content: space-between;
 
   button {
-    font-size: 16px;
+    font-size: ${({ theme }) => `${theme.spacing.medium}px`};
     cursor: pointer;
     cursor: pointer;
     background: transparent;
