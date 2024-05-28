@@ -1,11 +1,13 @@
 import React, { createContext, useState } from 'react';
 
-export const ThemeContext = createContext('');
+export const ThemeContext = createContext({});
 
 export default function ThemeContextProvider({ children }) {
-  const themeState = useState('dark');
+  const [theme, setTheme] = useState('dark');
 
   return (
-    <ThemeContext.Provider value={themeState}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
   );
 }
