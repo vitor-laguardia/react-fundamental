@@ -7,6 +7,5 @@ ReactDOM.render(
   <ThemeContextProvider>
     <App />
   </ThemeContextProvider>,
-
   document.getElementById('root')
 );
